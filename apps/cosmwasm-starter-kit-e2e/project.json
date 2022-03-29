@@ -1,0 +1,28 @@
+{
+  "root": "apps/cosmwasm-starter-kit-e2e",
+  "sourceRoot": "apps/cosmwasm-starter-kit-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/cosmwasm-starter-kit-e2e/cypress.json",
+        "devServerTarget": "cosmwasm-starter-kit:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "cosmwasm-starter-kit:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cosmwasm-starter-kit-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["cosmwasm-starter-kit"]
+}

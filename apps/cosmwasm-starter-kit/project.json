@@ -1,0 +1,54 @@
+{
+  "root": "apps/cosmwasm-starter-kit",
+  "sourceRoot": "apps/cosmwasm-starter-kit",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/cosmwasm-starter-kit",
+        "outputPath": "dist/apps/cosmwasm-starter-kit"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "cosmwasm-starter-kit:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "cosmwasm-starter-kit:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "cosmwasm-starter-kit:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/cosmwasm-starter-kit"],
+      "options": {
+        "jestConfig": "apps/cosmwasm-starter-kit/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/cosmwasm-starter-kit/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  },
+  "tags": []
+}

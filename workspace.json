@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "cosmwasm-starter-kit": "apps/cosmwasm-starter-kit",
+    "cosmwasm-starter-kit-e2e": "apps/cosmwasm-starter-kit-e2e"
+  }
+}
