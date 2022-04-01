@@ -46,7 +46,7 @@ svg {
   text-rendering: optimizeLegibility;
 }
 pre {
-  background-color: rgba(55, 65, 81, 1);
+  background-color: rgb(34, 52, 214);
   border-radius: 0.25rem;
   color: rgba(229, 231, 235, 1);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,

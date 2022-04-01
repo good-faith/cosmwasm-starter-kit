@@ -1,11 +1,45 @@
 import styled from 'styled-components';
 
+import {
+  A,
+  Form,
+  Input,
+  Button,
+  Navbar,
+  Container,
+  NavbarBrand,
+  NavbarToggler,
+  Collapse,
+  Nav,
+  NavItem,
+  NavLink,
+} from '@bootstrap-styled/v4';
+
+
 const StyledPage = styled.div`
   .page {
   }
 `;
 
+const Button = styled.button`
+  /* This renders the buttons above... Edit me! */
+  display: inline-block;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+  background: blue;
+  color: white;
+  border: 2px solid white;
+`
+
+
 export function Index() {
+
+var state = {
+  isOpen: false
+}
+
   /*
    * Replace the elements below with your own.
    *
@@ -13,6 +47,33 @@ export function Index() {
    */
   return (
     <StyledPage>
+       <Navbar color="faded" light toggleable="lg">
+        <Container>
+          <div className="d-flex justify-content-between">
+            <NavbarBrand>Y8</NavbarBrand>
+            {/* <NavbarToggler onClick={() => setState({ isOpen: !state.isOpen })} /> */}
+          </div>
+          <Nav navbar className="mr-auto">
+              <NavItem>
+                <NavLink>Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>Friends</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink disabled>Disabled</NavLink>
+              </NavItem>
+            </Nav>
+            <Form inline className="my-2 my-lg-0">
+              <Input className="form-control mr-sm-2" type="text" placeholder="Search" />
+              <Button>Search</Button>
+            </Form>
+          {/* <Collapse navbar isOpen={state.isOpen}>
+           
+          </Collapse> */}
+        </Container>
+      </Navbar>
+      
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
@@ -418,3 +479,6 @@ export function Index() {
 }
 
 export default Index;
+
+
+

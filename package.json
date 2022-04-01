@@ -9,6 +9,7 @@
   },
   "private": true,
   "dependencies": {
+    "@bootstrap-styled/v4": "^3.4.0",
     "@nrwl/next": "13.9.5",
     "core-js": "^3.6.5",
     "next": "12.1.0",
